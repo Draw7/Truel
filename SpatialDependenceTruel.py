@@ -20,7 +20,6 @@ winners = [0,0,0]
 simulations = 2000
 means = [0.9, 0.7, 0.5]
 sigma = 0.2
-fh = open("Risultati/risultati_senzaprobabilitàNormale_2_5.txt", "w")
 
 for i in range(simulations):
     prova.matrix_setting(means, sigma)  
@@ -33,7 +32,4 @@ for i in range(simulations):
     winners[prova.output[0][0]] += 1
     print(i)
 for i in range(len(winners)):
-    fh.write("Opinion "+str(i)+": "+str(winners[i])+"\n")
-
-fh.close()
-print("fine")
+    print("Opinion "+str(i)+": "+str(winners[i]))
