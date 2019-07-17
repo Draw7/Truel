@@ -30,6 +30,5 @@ for i in range(simulations):
         prova.opinion_spreading()
         prova.update()
     winners[prova.output[0][0]] += 1
-    print(i)
 for i in range(len(winners)):
     print("Opinion "+str(i)+": "+str(winners[i]))
